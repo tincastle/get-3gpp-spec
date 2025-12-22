@@ -1,6 +1,5 @@
 use clap::Parser;
-use std::process;
-use get_3gpp_spec::{parse_spec_number, SpecNumber};
+use get_3gpp_spec::{SpecNumber, DateFilter};
 
 /// Simple CLI for fetching 3GPP spec info
 #[derive(Parser, Debug)]
@@ -9,9 +8,9 @@ struct Args {
     /// 3GPP spec number (positional)
     spec_number: SpecNumber,
 
-    /// Date string (optional)
+    /// Date string (optional) — format must be YYYY-MM
     #[arg(short, long)]
-    date: Option<String>,
+    date: Option<DateFilter>,
 
     /// Release number (nonnegative integer)
     #[arg(short, long, value_parser = clap::value_parser!(u32))]

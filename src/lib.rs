@@ -40,6 +40,76 @@ pub fn parse_spec_number(spec: &str) -> Result<SpecNumber, String> {
     })
 }
 
+/// Month of year with explicit numeric values 1..=12.
+#[repr(u8)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Month {
+    January = 1,
+    February = 2,
+    March = 3,
+    April = 4,
+    May = 5,
+    June = 6,
+    July = 7,
+    August = 8,
+    September = 9,
+    October = 10,
+    November = 11,
+    December = 12,
+}
+
+/// Simple filter holding a year and month.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct DateFilter {
+    pub year: u32,
+    pub month: Month,
+}
+
+impl std::convert::TryFrom<u8> for Month {
+    type Error = String;
+
+    fn try_from(value: u8) -> Result<Self, Self::Error> {
+        match value {
+            1 => Ok(Month::January),
+            2 => Ok(Month::February),
+            3 => Ok(Month::March),
+            4 => Ok(Month::April),
+            5 => Ok(Month::May),
+            6 => Ok(Month::June),
+            7 => Ok(Month::July),
+            8 => Ok(Month::August),
+            9 => Ok(Month::September),
+            10 => Ok(Month::October),
+            11 => Ok(Month::November),
+            12 => Ok(Month::December),
+            _ => Err(format!("invalid month value: {} (expected 1..=12)", value)),
+        }
+    }
+}
+
+impl std::str::FromStr for DateFilter {
+    type Err = String;
+
+    /// Parse a date string in YYYY-MM format into `DateFilter`.
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        let re = Regex::new(r"^(\d{4})-(\d{2})$")
+            .map_err(|e| format!("internal regex error: {}", e))?;
+        let caps = re.captures(s).ok_or_else(|| format!("invalid date '{}': must be YYYY-MM", s))?;
+        let year: u32 = caps.get(1)
+            .ok_or("missing year")?
+            .as_str()
+            .parse()
+            .map_err(|e| format!("invalid year: {}", e))?;
+        let month_num: u8 = caps.get(2)
+            .ok_or("missing month")?
+            .as_str()
+            .parse()
+            .map_err(|e| format!("invalid month: {}", e))?;
+        let month = Month::try_from(month_num)?;
+        Ok(DateFilter { year, month })
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::{parse_spec_number, SpecNumber};
