@@ -8,3 +8,4 @@ clap = { version = "4", features = ["derive"] }
 reqwest = { version = "0.11", features = ["blocking", "json"] }
 scraper = "0.14"
 regex = "1"
+chrono = { version = "0.4", features = ["serde"] }

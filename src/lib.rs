@@ -1,4 +1,8 @@
 use regex::Regex;
+use chrono::{DateTime, Utc};
+
+/// Base URL for 3GPP spec archive.
+pub const BASE_URL: &str = "https://www.3gpp.org/ftp/Specs/archive/";
 
 /// Struct holding parsed spec number parts.
 #[derive(Debug, PartialEq, Eq, Clone)]
@@ -65,6 +69,22 @@ pub struct DateFilter {
     pub month: Month,
 }
 
+/// Version with nonnegative integer components.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Version {
+    pub major: u32,
+    pub minor: u32,
+    pub editorial: u32,
+}
+
+/// Single spec item including version, date and URL.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct SpecItem {
+    pub version: Version,
+    pub date: DateTime<Utc>,
+    pub url: String,
+}
+
 impl std::convert::TryFrom<u8> for Month {
     type Error = String;
 
@@ -108,6 +128,17 @@ impl std::str::FromStr for DateFilter {
         let month = Month::try_from(month_num)?;
         Ok(DateFilter { year, month })
     }
+}
+
+/// List specs matching provided filters.
+///
+/// This is a simple placeholder implementation that returns an empty list.
+pub fn list(
+    _spec_number: &str,
+    _release: Option<u32>,
+    _date_filter: Option<DateFilter>,
+) -> Result<Vec<SpecItem>, String> {
+    todo!();
 }
 
 #[cfg(test)]
