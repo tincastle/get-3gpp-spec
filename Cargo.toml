@@ -1,0 +1,4 @@
+[package]
+name = "get-3gpp-spec"
+version = "0.1.0"
+edition = "2024"
