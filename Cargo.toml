@@ -2,3 +2,8 @@
 name = "get-3gpp-spec"
 version = "0.1.0"
 edition = "2024"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+scraper = "0.14"
