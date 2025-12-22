@@ -1,5 +1,6 @@
+use chrono::{DateTime, Datelike, Utc};
 use regex::Regex;
-use chrono::{DateTime, Utc};
+use scraper::{Html, Selector};
 
 /// Base URL for 3GPP spec archive.
 pub const BASE_URL: &str = "https://www.3gpp.org/ftp/Specs/archive/";
@@ -9,6 +10,12 @@ pub const BASE_URL: &str = "https://www.3gpp.org/ftp/Specs/archive/";
 pub struct SpecNumber {
     pub series: String,
     pub number: String,
+}
+
+impl std::fmt::Display for SpecNumber {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}.{}", self.series, self.number)
+    }
 }
 
 impl std::str::FromStr for SpecNumber {
@@ -112,15 +119,19 @@ impl std::str::FromStr for DateFilter {
 
     /// Parse a date string in YYYY-MM format into `DateFilter`.
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let re = Regex::new(r"^(\d{4})-(\d{2})$")
-            .map_err(|e| format!("internal regex error: {}", e))?;
-        let caps = re.captures(s).ok_or_else(|| format!("invalid date '{}': must be YYYY-MM", s))?;
-        let year: u32 = caps.get(1)
+        let re =
+            Regex::new(r"^(\d{4})-(\d{2})$").map_err(|e| format!("internal regex error: {}", e))?;
+        let caps = re
+            .captures(s)
+            .ok_or_else(|| format!("invalid date '{}': must be YYYY-MM", s))?;
+        let year: u32 = caps
+            .get(1)
             .ok_or("missing year")?
             .as_str()
             .parse()
             .map_err(|e| format!("invalid year: {}", e))?;
-        let month_num: u8 = caps.get(2)
+        let month_num: u8 = caps
+            .get(2)
             .ok_or("missing month")?
             .as_str()
             .parse()
@@ -130,42 +141,199 @@ impl std::str::FromStr for DateFilter {
     }
 }
 
+fn parse_version(filename: &str) -> Option<Version> {
+    let stem = std::path::Path::new(filename).file_stem()?.to_str()?;
+    let parts: Vec<&str> = stem.split('-').collect();
+    let ver_str = parts.last()?.trim_end_matches(".zip");
+    match ver_str.len() {
+        3 => {
+            let chars: Vec<char> = ver_str.chars().collect();
+            let to_digit = |c: char| -> Option<u32> {
+                match c {
+                    '0'..='9' => Some(c as u32 - '0' as u32),
+                    'a'..='z' => Some(c as u32 - 'a' as u32 + 10),
+                    'A'..='Z' => Some(c as u32 - 'A' as u32 + 10),
+                    _ => None,
+                }
+            };
+            Some(Version {
+                major: to_digit(chars[0])?,
+                minor: to_digit(chars[1])?,
+                editorial: to_digit(chars[2])?,
+            })
+        }
+        6 => Some(Version {
+            major: ver_str.get(0..2)?.parse().ok()?,
+            minor: ver_str.get(2..4)?.parse().ok()?,
+            editorial: ver_str.get(4..6)?.parse().ok()?,
+        }),
+        _ => None,
+    }
+}
+
 /// List specs matching provided filters.
 ///
 /// This is a simple placeholder implementation that returns an empty list.
 pub fn list(
-    _spec_number: &str,
-    _release: Option<u32>,
-    _date_filter: Option<DateFilter>,
+    spec_number: SpecNumber,
+    release: Option<u32>,
+    date_filter: Option<DateFilter>,
 ) -> Result<Vec<SpecItem>, String> {
-    todo!();
+    let base =
+        reqwest::Url::parse(BASE_URL).map_err(|e| format!("failed to parse BASE_URL: {}", e))?;
+    let path = format!("{}_series/{}", spec_number.series, spec_number);
+    let url = base
+        .join(&path)
+        .map_err(|e| format!("failed to join path to BASE_URL: {}", e))?;
+
+    if !url.as_str().starts_with(BASE_URL) {
+        return Err(format!(
+            "security check failed: URL '{}' does not start with BASE_URL",
+            url
+        ));
+    }
+
+    let response = reqwest::blocking::get(url.clone())
+        .map_err(|e| format!("failed to fetch URL '{}': {}", url, e))?;
+
+    if !response.status().is_success() {
+        return Err(format!(
+            "failed to fetch URL '{}': status code {}",
+            url,
+            response.status()
+        ));
+    }
+
+    let body = response
+        .text()
+        .map_err(|e| format!("failed to read response body: {}", e))?;
+
+    let document = Html::parse_document(&body);
+    let (name_idx, date_idx) = find_header_indexes(&document)?;
+
+    let row_selector =
+        Selector::parse("tbody > tr").map_err(|e| format!("selector error: {:?}", e))?;
+    let cell_selector = Selector::parse("td").map_err(|e| format!("selector error: {:?}", e))?;
+    let link_selector =
+        Selector::parse("a[href]").map_err(|e| format!("selector error: {:?}", e))?;
+
+    let mut specs = Vec::new();
+
+    for row in document.select(&row_selector) {
+        let cells: Vec<_> = row.select(&cell_selector).collect();
+        if cells.len() <= std::cmp::max(name_idx, date_idx) {
+            continue;
+        }
+
+        let name_cell = cells[name_idx];
+        let date_cell = cells[date_idx];
+
+        let anchor = match name_cell.select(&link_selector).next() {
+            Some(a) => a,
+            None => continue,
+        };
+
+        let url = anchor.value().attr("href").unwrap_or("").to_string();
+        let filename = anchor.text().collect::<String>();
+
+        let date_str = date_cell.text().collect::<String>();
+        let date_str = date_str.trim();
+
+        let date = match chrono::NaiveDateTime::parse_from_str(date_str, "%Y/%m/%d %-H:%M") {
+            Ok(dt) => DateTime::from_naive_utc_and_offset(dt, Utc),
+            Err(_) => continue,
+        };
+
+        let version = match parse_version(&filename) {
+            Some(v) => v,
+            None => continue,
+        };
+
+        if let Some(rel) = release {
+            if version.major != rel {
+                continue;
+            }
+        }
+
+        todo!();
+        if let Some(df) = date_filter {
+            if date.year() != df.year as i32 || date.month() != df.month as u32 {
+                continue;
+            }
+        }
+
+        specs.push(SpecItem { version, date, url });
+    }
+
+    Ok(specs)
+}
+
+/// Find the column indexes for "name" and "date" in the table header.
+/// Returns `Ok((name_index, date_index))` on success.
+pub fn find_header_indexes(document: &Html) -> Result<(usize, usize), String> {
+    let selector = Selector::parse("thead > tr > th")
+        .map_err(|e| format!("internal selector error: {:?}", e))?;
+
+    let mut name_idx = None;
+    let mut date_idx = None;
+
+    for (i, element) in document.select(&selector).enumerate() {
+        let text = element.text().collect::<String>().to_lowercase();
+        if name_idx.is_none() && text.contains("name") {
+            name_idx = Some(i);
+        }
+        if date_idx.is_none() && text.contains("date") {
+            date_idx = Some(i);
+        }
+    }
+
+    match (name_idx, date_idx) {
+        (Some(n), Some(d)) => Ok((n, d)),
+        _ => Err("failed to find 'name' and 'date' columns".to_string()),
+    }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{parse_spec_number, SpecNumber};
+    use super::{SpecNumber, find_header_indexes, parse_spec_number};
+    use scraper::Html;
 
     #[test]
     fn valid_examples() {
         assert_eq!(
             parse_spec_number("23a"),
-            Ok(SpecNumber { series: "23".to_string(), number: "a".to_string() })
+            Ok(SpecNumber {
+                series: "23".to_string(),
+                number: "a".to_string()
+            })
         );
         assert_eq!(
             parse_spec_number("23.a"),
-            Ok(SpecNumber { series: "23".to_string(), number: "a".to_string() })
+            Ok(SpecNumber {
+                series: "23".to_string(),
+                number: "a".to_string()
+            })
         );
         assert_eq!(
             parse_spec_number("00Z"),
-            Ok(SpecNumber { series: "00".to_string(), number: "Z".to_string() })
+            Ok(SpecNumber {
+                series: "00".to_string(),
+                number: "Z".to_string()
+            })
         );
         assert_eq!(
             parse_spec_number("99.1"),
-            Ok(SpecNumber { series: "99".to_string(), number: "1".to_string() })
+            Ok(SpecNumber {
+                series: "99".to_string(),
+                number: "1".to_string()
+            })
         );
         assert_eq!(
             parse_spec_number("45B6"),
-            Ok(SpecNumber { series: "45".to_string(), number: "B6".to_string() })
+            Ok(SpecNumber {
+                series: "45".to_string(),
+                number: "B6".to_string()
+            })
         );
     }
 
@@ -176,5 +344,26 @@ mod tests {
         assert!(parse_spec_number("ab23").is_err()); // doesn't start with digits
         assert!(parse_spec_number("23.").is_err()); // dot with no alnum after
         assert!(parse_spec_number("").is_err());
+    }
+
+    #[test]
+    fn test_find_header_indexes() {
+        let html = r#"
+            <table style="margin-left:20px">
+                <thead>
+                  <tr>
+				  <th style="text-align:center">
+					<br>
+					<input style="" title="Select all" type="checkbox" onclick="selectAll(this.checked);"> 
+					</th>
+                    <th>&nbsp;</th>
+                    <th><a href="?sortby=name">sort by name</a>/<a href="?sortby=namerev">desc</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th><a href="?sortby=date">sort by date</a>/<a href="?sortby=daterev">desc</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> 
+                    <th><a href="?sortby=size">sort by size</a>/<a href="?sortby=sizerev">desc</a></th>
+                  </tr>
+                </thead>
+        "#;
+        let doc = Html::parse_document(html);
+        assert_eq!(find_header_indexes(&doc), Ok((2, 3)));
     }
 }
