@@ -1,0 +1,2142 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <title>Directory Listing /ftp/Specs/archive/23_series/23.501</title>
+        <style type="text/css">            
+			body{font-size:0.8em}
+            a { text-decoration: none; }
+            a:hover { text-decoration: underline; }
+            th {text-align:left;}
+            .box {float: left;  min-height: 50px;  margin: 0.5em; }
+            .after-box {  clear: left;}
+			h2 { margin-top:30px;}
+			.icon{width:22px;height:22px}
+			.myButton {
+				box-shadow:inset 0px 1px 0px 0px #a4e271;
+				background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+				background-color:#89c403;
+				border-radius:6px;
+				border:1px solid #74b807;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family:Arial;
+				font-size:15px;
+				font-weight:bold;
+				padding:6px 24px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #528009;
+				margin-top:25px;
+			}
+			.myButton:hover {
+				background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+				background-color:#77a809;
+			}
+			.myButton:active {
+				position:relative;
+				top:1px;
+			}
+			#dragNdrop{
+			
+				display:none;
+			
+				border:4px grey dashed;
+				width:500px;
+				padding:50px;
+				text-align: center;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				margin-bottom:15px;				
+			}
+			#dragNdrop:hover{
+				cursor:pointer;
+			}
+			.resultMsg{
+				font-size:20px;
+				width:40%;
+				padding: 15px;
+				margin-bottom: 20px;
+				border: 1px solid transparent;
+				border-radius: 4px;
+			}
+			.success{
+				color: #3c763d;
+				background-color: #dff0d8;
+				border-color: #d6e9c6;
+			}
+			.failure{
+				color: #a94442;
+				background-color: #f2dede;
+				border-color: #ebccd1;
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+
+        </style>
+		<script type="text/javascript">
+			function expandDnD(){
+				
+				window.location = window.location.href + "?login=1";
+				
+				var divDnD = document.getElementById("dragNdrop");
+				divDnD.style.display = "block";
+			}	
+		</script>
+    </head>
+    <body>
+        <header>
+            <div class="box">
+                <img alt="ETSI logo" width="100" src="/ftp/zIcons/main-logo-3gpp.png">
+            </div>
+            <div class="box">
+                <h2>
+                
+                        
+                        <a href="https://www.3gpp.org/">www.3gpp.org</a> /
+                        
+                        <a href="https://www.3gpp.org/ftp/">ftp</a> /
+                    
+                        <a href="https://www.3gpp.org/ftp/Specs/">Specs</a> /
+                    
+                        <a href="https://www.3gpp.org/ftp/Specs/archive/">archive</a> /
+                    
+                        <a href="https://www.3gpp.org/ftp/Specs/archive/23_series/">23_series</a> /
+                    
+                        23.501
+                    
+                    </h2>
+            </div>
+			
+            <div class="after-box">
+            </div>
+        </header>
+			
+        <form method="post" action="./23.501" id="ctl00">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTYzMzc3NjExMA9kFgRmDxYCHgtfIUl0ZW1Db3VudAIFFgoCAQ9kFgJmDxUBLTxhIGhyZWY9Imh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC8iPmZ0cDwvYT4gL2QCAg9kFgJmDxUBNTxhIGhyZWY9Imh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy8iPlNwZWNzPC9hPiAvZAIDD2QWAmYPFQE/PGEgaHJlZj0iaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvIj5hcmNoaXZlPC9hPiAvZAIED2QWAmYPFQFLPGEgaHJlZj0iaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLyI+MjNfc2VyaWVzPC9hPiAvZAIFD2QWAmYPFQEGMjMuNTAxZAIBD2QWBGYPFgIfAAJgFsABZg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0wMDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTAwMC56aXANMjM1MDEtMDAwLnppcBAyMDE3LzAxLzIzIDE2OjAxBzc5LDIgS0JkAgEPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtMDEwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS0wMTAuemlwDTIzNTAxLTAxMC56aXAPMjAxNy8wMS8yNSA5OjE1CTIxMzcsNCBLQmQCAg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0wMTEuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTAxMS56aXANMjM1MDEtMDExLnppcBAyMDE3LzAxLzI2IDEzOjMzCTE5NDUsMiBLQmQCAw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0wMjAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTAyMC56aXANMjM1MDEtMDIwLnppcA8yMDE3LzAyLzA2IDY6NDEJMjE4NywxIEtCZAIED2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLTAzMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtMDMwLnppcA0yMzUwMS0wMzAuemlwDzIwMTcvMDIvMjggNjo0MwkzMzgxLDUgS0JkAgUPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtMDMxLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS0wMzEuemlwDTIzNTAxLTAzMS56aXAPMjAxNy8wMy8wNiA2OjE2CTI3MDQsNSBLQmQCBg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0wNDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTA0MC56aXANMjM1MDEtMDQwLnppcA8yMDE3LzA0LzIwIDY6NDAHMzgxMyBLQmQCBw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0wNTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTA1MC56aXANMjM1MDEtMDUwLnppcA8yMDE3LzA2LzAxIDc6MzUJNDE1OSwyIEtCZAIID2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLTEwMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtMTAwLnppcA0yMzUwMS0xMDAuemlwEDIwMTcvMDYvMDEgMTQ6MDkHMTg4NSBLQmQCCQ9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0xMTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTExMC56aXANMjM1MDEtMTEwLnppcA8yMDE3LzA3LzIxIDg6NDIJNTE2NCwzIEtCZAIKD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLTEyMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtMTIwLnppcA0yMzUwMS0xMjAuemlwEDIwMTcvMDcvMjYgMTU6MjEJNDE3Myw3IEtCZAILD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLTEzMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtMTMwLnppcA0yMzUwMS0xMzAuemlwDzIwMTcvMDkvMDkgOToyOAk0ODI0LDYgS0JkAgwPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtMTQwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS0xNDAuemlwDTIzNTAxLTE0MC56aXAPMjAxNy8wOS8yOCA1OjU0CTQyNTQsNiBLQmQCDQ9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0xNTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTE1MC56aXANMjM1MDEtMTUwLnppcBAyMDE3LzExLzEzIDE0OjEwCTQ0MTUsNiBLQmQCDg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0xNjAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTE2MC56aXANMjM1MDEtMTYwLnppcBAyMDE3LzEyLzE0IDE1OjAyCTQ3MjEsNSBLQmQCDw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS0yMDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLTIwMC56aXANMjM1MDEtMjAwLnppcA8yMDE3LzEyLzE1IDg6MzkJMjA5OCwyIEtCZAIQD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLTIwMS56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtMjAxLnppcA0yMzUwMS0yMDEuemlwDzIwMTcvMTIvMTUgODo1NgkyMTAxLDkgS0JkAhEPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjAwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mMDAuemlwDTIzNTAxLWYwMC56aXAQMjAxNy8xMi8yMiAxNToyMwcyMDk0IEtCZAISD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWYxMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZjEwLnppcA0yMzUwMS1mMTAuemlwEDIwMTgvMDMvMjggMTQ6NTQJMjI0OSwyIEtCZAITD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWYyMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZjIwLnppcA0yMzUwMS1mMjAuemlwDzIwMTgvMDYvMTkgNjo0OQkyMjQwLDEgS0JkAhQPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjMwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mMzAuemlwDTIzNTAxLWYzMC56aXAQMjAxOC8wOS8xNyAxNDoyNAkyMjU0LDkgS0JkAhUPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjQwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mNDAuemlwDTIzNTAxLWY0MC56aXAQMjAxOC8xMi8xOCAxMToyOQkyMzQ0LDQgS0JkAhYPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjUwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mNTAuemlwDTIzNTAxLWY1MC56aXAQMjAxOS8wMy8yNSAxNTozNgkyMzU4LDEgS0JkAhcPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjYwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mNjAuemlwDTIzNTAxLWY2MC56aXAQMjAxOS8xMC8wOSAxNTozOAkyNDI1LDMgS0JkAhgPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjcwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mNzAuemlwDTIzNTAxLWY3MC56aXAQMjAxOS8wOS8yNCAxMzozMQcyNDM5IEtCZAIZD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWY4MC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZjgwLnppcA0yMzUwMS1mODAuemlwDzIwMTkvMTIvMjIgODo0OAkyMzQyLDUgS0JkAhoPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZjkwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mOTAuemlwDTIzNTAxLWY5MC56aXAPMjAyMC8wMy8yNyA4OjI3CTIzNTAsMSBLQmQCGw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1mYTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWZhMC56aXANMjM1MDEtZmEwLnppcA8yMDIwLzA3LzA5IDc6NDYJMjM1Nyw4IEtCZAIcD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWZiMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZmIwLnppcA0yMzUwMS1mYjAuemlwDzIwMjAvMDkvMjQgOTozOAkyMzY0LDkgS0JkAh0PZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZmMwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mYzAuemlwDTIzNTAxLWZjMC56aXAQMjAyMC8xMi8xNyAxMzowNwkyMzY1LDEgS0JkAh4PZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZmQwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1mZDAuemlwDTIzNTAxLWZkMC56aXAPMjAyMi8wMy8yMyA4OjUzCTIzNjEsNCBLQmQCHw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nMDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWcwMC56aXANMjM1MDEtZzAwLnppcBAyMDE5LzAzLzI4IDE1OjM5CTM5MzgsOCBLQmQCIA9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nMDEuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWcwMS56aXANMjM1MDEtZzAxLnppcA8yMDE5LzA0LzAxIDY6MzkJMzkzOCw0IEtCZAIhD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWcwMi56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZzAyLnppcA0yMzUwMS1nMDIuemlwEDIwMTkvMDQvMDEgMTM6NTAJMzk0MSwzIEtCZAIiD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWcxMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZzEwLnppcA0yMzUwMS1nMTAuemlwEDIwMTkvMDYvMTEgMTE6MzIJNTUxNCw4IEtCZAIjD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWcyMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZzIwLnppcA0yMzUwMS1nMjAuemlwEDIwMTkvMDkvMjQgMTM6MzMJNTg0NSwyIEtCZAIkD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWczMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZzMwLnppcA0yMzUwMS1nMzAuemlwDzIwMTkvMTIvMjIgODo0OQk1MjEwLDggS0JkAiUPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZzQwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1nNDAuemlwDTIzNTAxLWc0MC56aXAPMjAyMC8wMy8yNyA4OjI3CTUzNDgsNyBLQmQCJg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nNTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWc1MC56aXANMjM1MDEtZzUwLnppcA8yMDIwLzA3LzA5IDg6NDkJNTM3OSwyIEtCZAInD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWc1MS56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZzUxLnppcA0yMzUwMS1nNTEuemlwDzIwMjAvMDgvMDMgODoyNQk1MDMxLDIgS0JkAigPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZzYwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1nNjAuemlwDTIzNTAxLWc2MC56aXAPMjAyMC8wOS8yNCA5OjM5CTUwOTYsMSBLQmQCKQ9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nNzAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWc3MC56aXANMjM1MDEtZzcwLnppcBAyMDIwLzEyLzE3IDEzOjA3CTU0NTgsMSBLQmQCKg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nODAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWc4MC56aXANMjM1MDEtZzgwLnppcBAyMDIxLzAzLzMwIDE3OjA2CTU0NjcsNyBLQmQCKw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nOTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWc5MC56aXANMjM1MDEtZzkwLnppcBAyMDIxLzA2LzI0IDEyOjQxBzU1MDggS0JkAiwPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZ2EwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1nYTAuemlwDTIzNTAxLWdhMC56aXAPMjAyMS8wOS8yNCA4OjQ4CTU1MjAsOSBLQmQCLQ9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nYjAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWdiMC56aXANMjM1MDEtZ2IwLnppcBAyMDIxLzEyLzIzIDEwOjE0CTU1NzcsMiBLQmQCLg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nYzAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWdjMC56aXANMjM1MDEtZ2MwLnppcA8yMDIyLzAzLzIzIDg6NTQJNTU3Myw3IEtCZAIvD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWdkMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZ2QwLnppcA0yMzUwMS1nZDAuemlwEDIwMjIvMDYvMTUgMTU6MDMJNTU3Nyw5IEtCZAIwD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWdlMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZ2UwLnppcA0yMzUwMS1nZTAuemlwDzIwMjIvMDkvMjIgODo1MQk1NTc4LDcgS0JkAjEPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZ2YwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1nZjAuemlwDTIzNTAxLWdmMC56aXAQMjAyMi8xMi8yMSAxMjozMAk1NjQ0LDEgS0JkAjIPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZ2cwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1nZzAuemlwDTIzNTAxLWdnMC56aXAQMjAyMy8wMy8zMSAxMjo1Nwk1NjQ5LDggS0JkAjMPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtZ2gwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1naDAuemlwDTIzNTAxLWdoMC56aXAPMjAyMy8wNi8yMiA1OjQxCTU2NDUsMSBLQmQCNA9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1naTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWdpMC56aXANMjM1MDEtZ2kwLnppcA8yMDIzLzA5LzE5IDU6MDkJNTY0MywyIEtCZAI1D2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWdqMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtZ2owLnppcA0yMzUwMS1najAuemlwEDIwMjMvMTIvMTkgMTE6MDEHNTY0NCBLQmQCNg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1nazAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWdrMC56aXANMjM1MDEtZ2swLnppcBAyMDI0LzA2LzI2IDEzOjE4CTU2NDQsOCBLQmQCNw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1oMDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWgwMC56aXANMjM1MDEtaDAwLnppcBAyMDIxLzAzLzMwIDE3OjA4BzU3MDEgS0JkAjgPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDEwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oMTAuemlwDTIzNTAxLWgxMC56aXAQMjAyMS8wNi8yNCAxMjo0Mwk2MjIzLDIgS0JkAjkPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDExLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oMTEuemlwDTIzNTAxLWgxMS56aXAQMjAyMS8wNi8yNCAxNToyNwc2MjI1IEtCZAI6D2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWgyMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaDIwLnppcA0yMzUwMS1oMjAuemlwDzIwMjEvMDkvMjQgODo1Mgk2Mjc0LDMgS0JkAjsPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDMwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oMzAuemlwDTIzNTAxLWgzMC56aXAQMjAyMS8xMi8yMyAxMDozNwk2Mzk1LDIgS0JkAjwPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDQwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oNDAuemlwDTIzNTAxLWg0MC56aXAPMjAyMi8wMy8yMyA4OjU1BzYzOTEgS0JkAj0PZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDUwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oNTAuemlwDTIzNTAxLWg1MC56aXAQMjAyMi8wNi8xNSAxNTowMwk2ODI2LDUgS0JkAj4PZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDYwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oNjAuemlwDTIzNTAxLWg2MC56aXAPMjAyMi8wOS8yMiA4OjUxCTY4NDksNSBLQmQCPw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1oNzAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWg3MC56aXANMjM1MDEtaDcwLnppcBAyMDIyLzEyLzIxIDEyOjMwBzY4ODIgS0JkAkAPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDgwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oODAuemlwDTIzNTAxLWg4MC56aXAQMjAyMy8wMy8zMSAxMzowNAk2ODk0LDcgS0JkAkEPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaDkwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1oOTAuemlwDTIzNTAxLWg5MC56aXAPMjAyMy8wNi8yMiA1OjIzCTY5MDksNSBLQmQCQg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1oYTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWhhMC56aXANMjM1MDEtaGEwLnppcA8yMDIzLzA5LzE5IDU6MTAHNjg5OSBLQmQCQw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1oYjAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWhiMC56aXANMjM1MDEtaGIwLnppcBAyMDIzLzEyLzE5IDExOjAyCTY5MDEsOSBLQmQCRA9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1oYzAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWhjMC56aXANMjM1MDEtaGMwLnppcA8yMDI0LzAzLzI3IDc6NTAJNjkwMyw5IEtCZAJFD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWhkMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaGQwLnppcA0yMzUwMS1oZDAuemlwEDIwMjQvMDYvMjYgMTM6MTkJNjkwNCwyIEtCZAJGD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWhlMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaGUwLnppcA0yMzUwMS1oZTAuemlwEDIwMjQvMDkvMjQgMTM6MDMJNjkwNiw0IEtCZAJHD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWhmMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaGYwLnppcA0yMzUwMS1oZjAuemlwDzIwMjUvMTIvMTkgODowMQk2OTE0LDYgS0JkAkgPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaTAwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1pMDAuemlwDTIzNTAxLWkwMC56aXAQMjAyMi8xMi8yMSAxMjozMQk2OTE4LDMgS0JkAkkPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaTEwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1pMTAuemlwDTIzNTAxLWkxMC56aXAPMjAyMy8wNC8wNSA1OjI3CTc0ODQsOCBLQmQCSg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1pMjAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWkyMC56aXANMjM1MDEtaTIwLnppcBAyMDIzLzA2LzIzIDE1OjE5CTc2NDAsOCBLQmQCSw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1pMjEuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWkyMS56aXANMjM1MDEtaTIxLnppcA8yMDIzLzA2LzI5IDU6MjQJNzYyOSw3IEtCZAJMD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWkyMi56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaTIyLnppcA0yMzUwMS1pMjIuemlwDzIwMjMvMDcvMDcgNjoyOQk3NjI5LDcgS0JkAk0PZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtaTMwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1pMzAuemlwDTIzNTAxLWkzMC56aXAPMjAyMy8wOS8xOSA1OjEwCTc2NjEsMyBLQmQCTg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1pNDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWk0MC56aXANMjM1MDEtaTQwLnppcBAyMDIzLzEyLzE5IDExOjAzCTc3NjYsNyBLQmQCTw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1pNTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWk1MC56aXANMjM1MDEtaTUwLnppcA8yMDI0LzAzLzI3IDg6MDQJNzc5NSwxIEtCZAJQD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWk2MC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaTYwLnppcA0yMzUwMS1pNjAuemlwEDIwMjQvMDYvMjYgMTM6MjAJNzgwNSwyIEtCZAJRD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWk3MC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaTcwLnppcA0yMzUwMS1pNzAuemlwEDIwMjQvMDkvMjQgMTM6MDQJNzc2NCw3IEtCZAJSD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWk4MC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaTgwLnppcA0yMzUwMS1pODAuemlwEDIwMjQvMTIvMjAgMTU6MzUJNzc2OCw0IEtCZAJTD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWk5MC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaTkwLnppcA0yMzUwMS1pOTAuemlwEDIwMjUvMDMvMjUgMTI6MzYJNzc1OSw5IEtCZAJUD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWlhMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaWEwLnppcA0yMzUwMS1pYTAuemlwEDIwMjUvMDYvMTkgMTQ6MDcJNzc2NSwyIEtCZAJVD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWliMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaWIwLnppcA0yMzUwMS1pYjAuemlwEDIwMjUvMDkvMjQgMTE6MTcJNzc3Miw0IEtCZAJWD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWljMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtaWMwLnppcA0yMzUwMS1pYzAuemlwDzIwMjUvMTIvMTkgODowMgk3NzczLDggS0JkAlcPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtajAwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1qMDAuemlwDTIzNTAxLWowMC56aXAQMjAyNC8wNi8yNiAxMzoyMQk3OTU5LDIgS0JkAlgPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtajEwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1qMTAuemlwDTIzNTAxLWoxMC56aXAQMjAyNC8wOS8yNCAxMzowNQk4MTA1LDggS0JkAlkPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtajIwLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1qMjAuemlwDTIzNTAxLWoyMC56aXAQMjAyNC8xMi8yMCAxNTozNQk4NDg0LDMgS0JkAloPZBYEZg8VAUU8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJkb3dubG9hZElucHV0IiB2YWx1ZT0iMjM1MDEtajIxLnppcCIgLz5kAgEPFQYELnppcAxjbGFzcz0iZmlsZSJFaHR0cHM6Ly93d3cuM2dwcC5vcmcvZnRwL1NwZWNzL2FyY2hpdmUvMjNfc2VyaWVzLzIzLjUwMS8yMzUwMS1qMjEuemlwDTIzNTAxLWoyMS56aXAPMjAyNS8wMS8wNyA4OjIwCTg0ODUsMiBLQmQCWw9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1qMzAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWozMC56aXANMjM1MDEtajMwLnppcBAyMDI1LzAzLzI1IDEyOjM3CTg1MDQsNSBLQmQCXA9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1qNDAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWo0MC56aXANMjM1MDEtajQwLnppcBAyMDI1LzA2LzE5IDE0OjA4CTg1MzEsMSBLQmQCXQ9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1qNTAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWo1MC56aXANMjM1MDEtajUwLnppcBAyMDI1LzA5LzI0IDExOjE4CTg1NTQsMSBLQmQCXg9kFgRmDxUBRTxpbnB1dCB0eXBlPSJjaGVja2JveCIgY2xhc3M9ImRvd25sb2FkSW5wdXQiIHZhbHVlPSIyMzUwMS1qNjAuemlwIiAvPmQCAQ8VBgQuemlwDGNsYXNzPSJmaWxlIkVodHRwczovL3d3dy4zZ3BwLm9yZy9mdHAvU3BlY3MvYXJjaGl2ZS8yM19zZXJpZXMvMjMuNTAxLzIzNTAxLWo2MC56aXANMjM1MDEtajYwLnppcA8yMDI1LzEyLzE5IDg6MDMJODU3MSw5IEtCZAJfD2QWBGYPFQFFPGlucHV0IHR5cGU9ImNoZWNrYm94IiBjbGFzcz0iZG93bmxvYWRJbnB1dCIgdmFsdWU9IjIzNTAxLWswMC56aXAiIC8+ZAIBDxUGBC56aXAMY2xhc3M9ImZpbGUiRWh0dHBzOi8vd3d3LjNncHAub3JnL2Z0cC9TcGVjcy9hcmNoaXZlLzIzX3Nlcmllcy8yMy41MDEvMjM1MDEtazAwLnppcA0yMzUwMS1rMDAuemlwDzIwMjUvMTIvMTkgODoyMwk4NTk5LDcgS0JkAgEPDxYCHgRUZXh0BQk5NiBpdGVtcy5kZGSrTV8vJAaRdQHOZMXJD4YvlJB6As/rAPV5GdlvkfqmBA==">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EDC176C3">
+</div>
+			<div id="dragNdrop">
+				<img src="/ftp/zIcons/cloud-upload.png" alt="upload" width="100">
+				<br>Drag and drop documents here or click to upload
+				<br>
+				<div id="file-preview"></div>
+			</div>
+			
+			<div class="resultMsg failure" id="InvalidFolder" style="display:none">Invalid folder name</div>
+			
+<button id="downlaod" type="button" style="padding:6px;margin-top:0px" title="Download selected files" onclick="download(event);return false;" class="myButton">
+					Download 
+					<svg id="downloadingSVG" style="width:18px;display:none" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="3" r="1"><animate id="spinner_7Z73" begin="0;spinner_tKsu.end-0.5s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="16.50" cy="4.21" r="1"><animate id="spinner_Wd87" begin="spinner_7Z73.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="7.50" cy="4.21" r="1"><animate id="spinner_tKsu" begin="spinner_9Qlc.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="19.79" cy="7.50" r="1"><animate id="spinner_lMMO" begin="spinner_Wd87.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="4.21" cy="7.50" r="1"><animate id="spinner_9Qlc" begin="spinner_Khxv.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="21.00" cy="12.00" r="1"><animate id="spinner_5L9t" begin="spinner_lMMO.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="3.00" cy="12.00" r="1"><animate id="spinner_Khxv" begin="spinner_ld6P.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="19.79" cy="16.50" r="1"><animate id="spinner_BfTD" begin="spinner_5L9t.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="4.21" cy="16.50" r="1"><animate id="spinner_ld6P" begin="spinner_XyBs.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="16.50" cy="19.79" r="1"><animate id="spinner_7gAK" begin="spinner_BfTD.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="7.50" cy="19.79" r="1"><animate id="spinner_XyBs" begin="spinner_HiSl.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><circle cx="12" cy="21" r="1"><animate id="spinner_HiSl" begin="spinner_7gAK.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"></animate></circle><animateTransform attributeName="transform" type="rotate" dur="6s" values="360 12 12;0 12 12" repeatCount="indefinite"></animateTransform></g></svg>
+					<svg id="readyToDownloadSVG" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+					  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"></path>
+					  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"></path>
+					</svg>
+					</button>
+            <table style="margin-left:20px">
+                <thead>
+                  <tr>
+				  <th style="text-align:center">
+					<br>
+					<input style="" title="Select all" type="checkbox" onclick="selectAll(this.checked);"> 
+					</th>
+                    <th>&nbsp;</th>
+                    <th><a href="?sortby=name">sort by name</a>/<a href="?sortby=namerev">desc</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th><a href="?sortby=date">sort by date</a>/<a href="?sortby=daterev">desc</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> 
+                    <th><a href="?sortby=size">sort by size</a>/<a href="?sortby=sizerev">desc</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-000.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-000.zip">23501-000.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/01/23 16:01
+                                </td>
+                                <td>
+                                    79,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-010.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-010.zip">23501-010.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/01/25 9:15
+                                </td>
+                                <td>
+                                    2137,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-011.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-011.zip">23501-011.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/01/26 13:33
+                                </td>
+                                <td>
+                                    1945,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-020.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-020.zip">23501-020.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/02/06 6:41
+                                </td>
+                                <td>
+                                    2187,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-030.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-030.zip">23501-030.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/02/28 6:43
+                                </td>
+                                <td>
+                                    3381,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-031.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-031.zip">23501-031.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/03/06 6:16
+                                </td>
+                                <td>
+                                    2704,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-040.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-040.zip">23501-040.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/04/20 6:40
+                                </td>
+                                <td>
+                                    3813 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-050.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-050.zip">23501-050.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/06/01 7:35
+                                </td>
+                                <td>
+                                    4159,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-100.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-100.zip">23501-100.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/06/01 14:09
+                                </td>
+                                <td>
+                                    1885 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-110.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-110.zip">23501-110.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/07/21 8:42
+                                </td>
+                                <td>
+                                    5164,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-120.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-120.zip">23501-120.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/07/26 15:21
+                                </td>
+                                <td>
+                                    4173,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-130.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-130.zip">23501-130.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/09/09 9:28
+                                </td>
+                                <td>
+                                    4824,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-140.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-140.zip">23501-140.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/09/28 5:54
+                                </td>
+                                <td>
+                                    4254,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-150.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-150.zip">23501-150.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/11/13 14:10
+                                </td>
+                                <td>
+                                    4415,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-160.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-160.zip">23501-160.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/14 15:02
+                                </td>
+                                <td>
+                                    4721,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-200.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-200.zip">23501-200.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/15 8:39
+                                </td>
+                                <td>
+                                    2098,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-201.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-201.zip">23501-201.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/15 8:56
+                                </td>
+                                <td>
+                                    2101,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f00.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f00.zip">23501-f00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2017/12/22 15:23
+                                </td>
+                                <td>
+                                    2094 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f10.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f10.zip">23501-f10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/03/28 14:54
+                                </td>
+                                <td>
+                                    2249,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f20.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f20.zip">23501-f20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/06/19 6:49
+                                </td>
+                                <td>
+                                    2240,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f30.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f30.zip">23501-f30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/09/17 14:24
+                                </td>
+                                <td>
+                                    2254,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f40.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f40.zip">23501-f40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2018/12/18 11:29
+                                </td>
+                                <td>
+                                    2344,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f50.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f50.zip">23501-f50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/03/25 15:36
+                                </td>
+                                <td>
+                                    2358,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f60.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f60.zip">23501-f60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/10/09 15:38
+                                </td>
+                                <td>
+                                    2425,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f70.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f70.zip">23501-f70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/09/24 13:31
+                                </td>
+                                <td>
+                                    2439 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f80.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f80.zip">23501-f80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/12/22 8:48
+                                </td>
+                                <td>
+                                    2342,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-f90.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-f90.zip">23501-f90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/03/27 8:27
+                                </td>
+                                <td>
+                                    2350,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-fa0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-fa0.zip">23501-fa0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/07/09 7:46
+                                </td>
+                                <td>
+                                    2357,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-fb0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-fb0.zip">23501-fb0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/09/24 9:38
+                                </td>
+                                <td>
+                                    2364,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-fc0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-fc0.zip">23501-fc0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/12/17 13:07
+                                </td>
+                                <td>
+                                    2365,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-fd0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-fd0.zip">23501-fd0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/03/23 8:53
+                                </td>
+                                <td>
+                                    2361,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g00.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g00.zip">23501-g00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/03/28 15:39
+                                </td>
+                                <td>
+                                    3938,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g01.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g01.zip">23501-g01.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/04/01 6:39
+                                </td>
+                                <td>
+                                    3938,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g02.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g02.zip">23501-g02.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/04/01 13:50
+                                </td>
+                                <td>
+                                    3941,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g10.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g10.zip">23501-g10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/06/11 11:32
+                                </td>
+                                <td>
+                                    5514,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g20.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g20.zip">23501-g20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/09/24 13:33
+                                </td>
+                                <td>
+                                    5845,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g30.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g30.zip">23501-g30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2019/12/22 8:49
+                                </td>
+                                <td>
+                                    5210,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g40.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g40.zip">23501-g40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/03/27 8:27
+                                </td>
+                                <td>
+                                    5348,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g50.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g50.zip">23501-g50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/07/09 8:49
+                                </td>
+                                <td>
+                                    5379,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g51.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g51.zip">23501-g51.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/08/03 8:25
+                                </td>
+                                <td>
+                                    5031,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g60.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g60.zip">23501-g60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/09/24 9:39
+                                </td>
+                                <td>
+                                    5096,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g70.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g70.zip">23501-g70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2020/12/17 13:07
+                                </td>
+                                <td>
+                                    5458,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g80.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g80.zip">23501-g80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/03/30 17:06
+                                </td>
+                                <td>
+                                    5467,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-g90.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-g90.zip">23501-g90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/06/24 12:41
+                                </td>
+                                <td>
+                                    5508 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-ga0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ga0.zip">23501-ga0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/09/24 8:48
+                                </td>
+                                <td>
+                                    5520,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gb0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gb0.zip">23501-gb0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/12/23 10:14
+                                </td>
+                                <td>
+                                    5577,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gc0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gc0.zip">23501-gc0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/03/23 8:54
+                                </td>
+                                <td>
+                                    5573,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gd0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gd0.zip">23501-gd0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/06/15 15:03
+                                </td>
+                                <td>
+                                    5577,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-ge0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ge0.zip">23501-ge0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/09/22 8:51
+                                </td>
+                                <td>
+                                    5578,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gf0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gf0.zip">23501-gf0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/12/21 12:30
+                                </td>
+                                <td>
+                                    5644,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gg0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gg0.zip">23501-gg0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/03/31 12:57
+                                </td>
+                                <td>
+                                    5649,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gh0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gh0.zip">23501-gh0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/22 5:41
+                                </td>
+                                <td>
+                                    5645,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gi0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gi0.zip">23501-gi0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/19 5:09
+                                </td>
+                                <td>
+                                    5643,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gj0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gj0.zip">23501-gj0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/12/19 11:01
+                                </td>
+                                <td>
+                                    5644 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-gk0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-gk0.zip">23501-gk0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/06/26 13:18
+                                </td>
+                                <td>
+                                    5644,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h00.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h00.zip">23501-h00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/03/30 17:08
+                                </td>
+                                <td>
+                                    5701 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h10.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h10.zip">23501-h10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/06/24 12:43
+                                </td>
+                                <td>
+                                    6223,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h11.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h11.zip">23501-h11.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/06/24 15:27
+                                </td>
+                                <td>
+                                    6225 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h20.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h20.zip">23501-h20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/09/24 8:52
+                                </td>
+                                <td>
+                                    6274,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h30.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h30.zip">23501-h30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2021/12/23 10:37
+                                </td>
+                                <td>
+                                    6395,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h40.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h40.zip">23501-h40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/03/23 8:55
+                                </td>
+                                <td>
+                                    6391 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h50.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h50.zip">23501-h50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/06/15 15:03
+                                </td>
+                                <td>
+                                    6826,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h60.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h60.zip">23501-h60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/09/22 8:51
+                                </td>
+                                <td>
+                                    6849,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h70.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h70.zip">23501-h70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/12/21 12:30
+                                </td>
+                                <td>
+                                    6882 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h80.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h80.zip">23501-h80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/03/31 13:04
+                                </td>
+                                <td>
+                                    6894,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-h90.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-h90.zip">23501-h90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/22 5:23
+                                </td>
+                                <td>
+                                    6909,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-ha0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ha0.zip">23501-ha0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/19 5:10
+                                </td>
+                                <td>
+                                    6899 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-hb0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-hb0.zip">23501-hb0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/12/19 11:02
+                                </td>
+                                <td>
+                                    6901,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-hc0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-hc0.zip">23501-hc0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/03/27 7:50
+                                </td>
+                                <td>
+                                    6903,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-hd0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-hd0.zip">23501-hd0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/06/26 13:19
+                                </td>
+                                <td>
+                                    6904,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-he0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-he0.zip">23501-he0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/09/24 13:03
+                                </td>
+                                <td>
+                                    6906,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-hf0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-hf0.zip">23501-hf0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/12/19 8:01
+                                </td>
+                                <td>
+                                    6914,6 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i00.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i00.zip">23501-i00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2022/12/21 12:31
+                                </td>
+                                <td>
+                                    6918,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i10.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i10.zip">23501-i10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/04/05 5:27
+                                </td>
+                                <td>
+                                    7484,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i20.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i20.zip">23501-i20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/23 15:19
+                                </td>
+                                <td>
+                                    7640,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i21.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i21.zip">23501-i21.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/06/29 5:24
+                                </td>
+                                <td>
+                                    7629,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i22.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i22.zip">23501-i22.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/07/07 6:29
+                                </td>
+                                <td>
+                                    7629,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i30.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i30.zip">23501-i30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/09/19 5:10
+                                </td>
+                                <td>
+                                    7661,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i40.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i40.zip">23501-i40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2023/12/19 11:03
+                                </td>
+                                <td>
+                                    7766,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i50.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i50.zip">23501-i50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/03/27 8:04
+                                </td>
+                                <td>
+                                    7795,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i60.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i60.zip">23501-i60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/06/26 13:20
+                                </td>
+                                <td>
+                                    7805,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i70.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i70.zip">23501-i70.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/09/24 13:04
+                                </td>
+                                <td>
+                                    7764,7 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i80.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i80.zip">23501-i80.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/12/20 15:35
+                                </td>
+                                <td>
+                                    7768,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-i90.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i90.zip">23501-i90.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/03/25 12:36
+                                </td>
+                                <td>
+                                    7759,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-ia0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ia0.zip">23501-ia0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/06/19 14:07
+                                </td>
+                                <td>
+                                    7765,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-ib0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ib0.zip">23501-ib0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/09/24 11:17
+                                </td>
+                                <td>
+                                    7772,4 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-ic0.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ic0.zip">23501-ic0.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/12/19 8:02
+                                </td>
+                                <td>
+                                    7773,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j00.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j00.zip">23501-j00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/06/26 13:21
+                                </td>
+                                <td>
+                                    7959,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j10.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j10.zip">23501-j10.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/09/24 13:05
+                                </td>
+                                <td>
+                                    8105,8 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j20.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j20.zip">23501-j20.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2024/12/20 15:35
+                                </td>
+                                <td>
+                                    8484,3 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j21.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j21.zip">23501-j21.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/01/07 8:20
+                                </td>
+                                <td>
+                                    8485,2 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j30.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j30.zip">23501-j30.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/03/25 12:37
+                                </td>
+                                <td>
+                                    8504,5 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j40.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j40.zip">23501-j40.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/06/19 14:08
+                                </td>
+                                <td>
+                                    8531,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j50.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j50.zip">23501-j50.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/09/24 11:18
+                                </td>
+                                <td>
+                                    8554,1 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-j60.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-j60.zip">23501-j60.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/12/19 8:03
+                                </td>
+                                <td>
+                                    8571,9 KB
+                                </td>
+                            </tr>
+                        
+                            <tr>
+							<td style="text-align:center">
+								<input type="checkbox" class="downloadInput" value="23501-k00.zip"> 
+								</td>
+                                <td>
+                                    <img class="icon" alt="icon" src="/ftp/geticon.axd?file=.zip"> 
+                                </td>
+                                <td style="padding-right:10px">
+                                    <a class="file" href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-k00.zip">23501-k00.zip</a> 
+								</td>
+                                <td style="padding-right:10px">
+                                    2025/12/19 8:23
+                                </td>
+                                <td>
+                                    8599,7 KB
+                                </td>
+                            </tr>
+                        
+                </tbody>
+            </table>
+            <hr>
+            <p>
+                <span id="FileCount">96 items.</span>
+            </p>
+        </form>	
+	<script type="text/javascript">
+		var
+			dropRegion = document.getElementById("dragNdrop"),
+			filePreviewRegion = document.getElementById("file-preview");
+
+
+		// open file selector when clicked on the drop region
+		var fakeInput = document.createElement("input");
+		fakeInput.type = "file";
+		fakeInput.multiple = true;
+		dropRegion.addEventListener('click', function() {
+			fakeInput.click();
+		});
+
+		fakeInput.addEventListener("change", function() {
+			var files = fakeInput.files;
+			handleFiles(files);
+		});
+
+
+		function preventDefault(e) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		dropRegion.addEventListener('dragenter', preventDefault, false)
+		dropRegion.addEventListener('dragleave', preventDefault, false)
+		dropRegion.addEventListener('dragover', preventDefault, false)
+		dropRegion.addEventListener('drop', preventDefault, false)
+
+function scanFiles(item) {
+		  if (item.isFile) {
+			item.file(function(file) {previewAnduploadFile(file,getLocation(window.location.href).pathname + item.fullPath.replace(item.name,""))});
+			
+		  }
+		  if (item.isDirectory) {
+		    
+			if(validateFileName(item.name)){
+				var ajax2 = new XMLHttpRequest();
+				ajax2.open("GET", location.pathname + item.fullPath.replace(item.name,"") + "?createFolder=" + encodeURIComponent(item.name) , true);
+				ajax2.item = item;
+				ajax2.onreadystatechange = function(e) {
+					if (ajax2.readyState === 4) {
+						if (ajax2.status === 200) {
+						
+							let directoryReader = ajax2.item.createReader();
+							directoryReader.readEntries((entries) => {
+							  entries.forEach((entry) => {
+								scanFiles(entry);
+							  });
+							});
+							// done!
+							;
+							
+							if(ajax2.responseURL.substring(0, ajax2.responseURL.indexOf("?")) == window.location.href.split("?")[0] + "/"){
+								var bodyHtml = /<table.*?>([\s\S]*)<\/table>/.exec(ajax2.responseText)[1];
+								document.getElementsByTagName("table")[0].innerHTML = bodyHtml;
+							}
+						} else {
+							// error!
+						}
+						
+					}
+				};
+				ajax2.send();
+			}else{
+				document.getElementById("InvalidFolder").style.display = "block";
+			}
+		  }
+		}
+		function handleDrop(e) {
+			
+			var dt = e.dataTransfer,
+				files = dt.files,
+				items = dt.items;
+			for (var i = 0, len = items.length; i < len; i++) {
+				scanFiles(dt.items[i].webkitGetAsEntry());
+			}
+		}
+
+		dropRegion.addEventListener('drop', handleDrop, false);
+
+
+
+		function handleFiles(files) {
+			if (window.confirm("Are you sure you want to upload?")) {
+				for (var i = 0, len = files.length; i < len; i++) {
+					previewAnduploadFile(files[i]);
+				}
+			}
+		}
+		var getLocation = function(href) {
+			var l = document.createElement("a");
+			l.href = href;
+			return l;
+		};
+		function previewAnduploadFile(file,uploadLocation = getLocation(window.location.href).pathname) {
+
+			// container
+			var imgView = document.createElement("div");
+			imgView.className = "image-view";
+			filePreviewRegion.appendChild(imgView);
+
+			// previewing image
+			var img = document.createElement("span");
+			img.innerHTML = file.name + " ";
+			imgView.appendChild(img);
+
+			// progress overlay
+			var overlay = document.createElement("progress");
+			overlay.className = "overlay";
+			imgView.appendChild(overlay);
+
+
+			// create FormData
+			var formData = new FormData();
+			formData.append(file.name, file);
+
+			// upload the image
+			
+			//var uploadLocation = getLocation(window.location.href).pathname;
+			
+
+			var ajax = new XMLHttpRequest();
+			ajax.open("POST", uploadLocation, true);
+
+			ajax.onreadystatechange = function(e) {
+				if (ajax.readyState === 4) {
+					if (ajax.status === 200) {
+						// done!
+						if(ajax.responseURL.substring(0, ajax.responseURL.indexOf("?")) == window.location.href.split("?")[0] + "/"){
+								var bodyHtml = /<table.*?>([\s\S]*)<\/table>/.exec(ajax.responseText)[1];
+								document.getElementsByTagName("table")[0].innerHTML = bodyHtml;
+							}
+						
+					} else {
+						// error!
+					}
+				}
+			}
+
+			ajax.upload.onprogress = function(e) {
+
+				var perc = (e.loaded / e.total * 100) || 100;
+
+				overlay.value = perc;
+				overlay.max=100;
+			}
+
+			ajax.send(formData);
+			
+
+		}
+		function uploadFolder(event){
+			document.getElementById("InvalidFolder").style.display = "none";
+			event.preventDefault();
+			if(validateFileName(document.getElementById("folderName").value)){
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET", location.pathname + "?createFolder=" + encodeURIComponent(document.getElementById("folderName").value) , true);
+				ajax.onreadystatechange = function(e) {
+					if (ajax.readyState === 4) {
+						if (ajax.status === 200) {
+							//TODO
+							if(ajax.responseText == "Success"){
+								window.location.reload();
+							}
+						} else {
+							// error!
+						}
+					}
+				}
+				ajax.send();
+				return false;
+			}else{
+				document.getElementById("InvalidFolder").style.display = "block";
+				return false;
+			}
+		}
+		function changeFolderPermissions(){
+			var r = confirm("You are about to change the permissions for this folder.");
+			if (r == true) {
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET", location.pathname + "?changeFolderPermissions=1&t=" + Date.now() , true);
+				ajax.onreadystatechange = function(e) {
+					if (ajax.readyState === 4) {
+						if (ajax.status === 200) {
+							// done!
+							var bodyHtml = /<body.*?>([\s\S]*)<\/body>/.exec(ajax.responseText)[1];
+							document.getElementsByTagName("body")[0].innerHTML = bodyHtml;
+							var element = document.getElementById("enableUploads");
+							document.getElementById("dragNdrop").style.display = "block";
+							if(typeof(element) != 'undefined' && element != null){
+								document.getElementById("dragNdrop").style.display = "none";
+							}
+						} else {
+							// error!
+						}
+					}
+				}
+				ajax.send();
+			} 
+			return false;
+		}
+		function validateFileName(text) { 
+			var re = /[<>:"\/\\|?*\x00-\x1F]|^(?:aux|con|clock\$|nul|prn|com[1-9]|lpt[1-9])$/i;
+		    if(!re.test(text)) {
+			  return true;
+			}
+			return false;
+		}
+		function download(){
+			document.getElementById("readyToDownloadSVG").style.display = "none";
+			document.getElementById("downloadingSVG").style.display = "inline";
+			var filesInputs = document.getElementsByClassName("downloadInput");
+			if (filesInputs.length == 1){
+				window.location = document.location.protocol + '//' + document.location.host + document.location.pathname + "/" + filesInputs[i].value;
+			}
+			var filesToDownload = [];
+			for(var i=0;i<filesInputs.length;i++){
+				if(filesInputs[i].checked){
+					filesToDownload.push(filesInputs[i].value);
+				}
+			}
+			
+			fetch(location.pathname + "?download=multiple", {
+			  method: "POST",
+			  headers: {
+				"Content-Type": "application/json"
+			  },
+			  body: JSON.stringify(filesToDownload)
+			})
+			.then(response => response.blob())
+			.then(blob => {
+			  const url = window.URL.createObjectURL(blob);
+			  const a = document.createElement("a");
+			  a.href = url;
+			  a.download = "download.zip";  // Set desired file name
+			  document.body.appendChild(a);
+			  a.click();
+			  a.remove();
+			  document.getElementById("downloadingSVG").style.display = "none";
+			  document.getElementById("readyToDownloadSVG").style.display = "inline";
+			});
+		}
+		function selectAll(checked){
+			const checkboxes = document.querySelectorAll('.downloadInput');
+			checkboxes.forEach(checkbox => {
+			  checkbox.checked = checked;
+			});
+		}
+	</script>		
+    
+
+</body></html>
