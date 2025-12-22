@@ -1,7 +1,7 @@
 use regex::Regex;
 
 /// Struct holding parsed spec number parts.
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub struct SpecNumber {
     pub series: String,
     pub number: String,
