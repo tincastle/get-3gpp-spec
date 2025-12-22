@@ -8,7 +8,9 @@ pub struct SpecNumber {
 }
 
 impl std::str::FromStr for SpecNumber {
-    fn from_str(s: &str) -> Result<Self, String> {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
         parse_spec_number(s)
     }
 }
