@@ -24,7 +24,7 @@ Options:
 
 ## Cross-compilation
 
-## Windows on Linux
+### Windows on Linux
 
 ```sh
 # Add target
