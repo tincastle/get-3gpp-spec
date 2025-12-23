@@ -110,6 +110,20 @@ pub struct SpecItem {
     pub url: String,
 }
 
+impl std::fmt::Display for SpecItem {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{:2}.{:2}.{:2} @ {} ({})",
+            self.version.major,
+            self.version.minor,
+            self.version.editorial,
+            self.date.to_rfc3339(),
+            self.url
+        )
+    }
+}
+
 impl std::convert::TryFrom<u8> for Month {
     type Error = String;
 

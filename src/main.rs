@@ -74,7 +74,7 @@ fn main() {
                 }
                 true => {
                     for item in items.iter() {
-                        println!("{:?}", item);
+                        println!("{}", item);
                     }
                 }
             }
