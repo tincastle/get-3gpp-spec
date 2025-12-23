@@ -1,4 +1,4 @@
-use chrono::{DateTime, Datelike, Utc};
+use chrono::{DateTime, Utc};
 use regex::Regex;
 use scraper::{Html, Selector};
 
