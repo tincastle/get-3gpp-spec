@@ -1,5 +1,29 @@
 use clap::Parser;
 use get_3gpp_spec::{SpecNumber, DateFilter};
+use std::fs::File;
+use std::io::copy;
+use std::path::{Path, PathBuf};
+
+fn download_url_to_path(url: &str, dest: &Path) -> Result<PathBuf, String> {
+    let resp = reqwest::blocking::get(url)
+        .map_err(|e| format!("request failed for '{}': {}", url, e))?;
+
+    if !resp.status().is_success() {
+        return Err(format!("failed to download '{}': status {}", url, resp.status()));
+    }
+
+    let content = resp
+        .bytes()
+        .map_err(|e| format!("failed to read response body for '{}': {}", url, e))?;
+
+    let mut file = File::create(dest)
+        .map_err(|e| format!("failed to create file '{}': {}", dest.display(), e))?;
+
+    copy(&mut content.as_ref(), &mut file)
+        .map_err(|e| format!("failed to write to '{}': {}", dest.display(), e))?;
+
+    Ok(dest.to_path_buf())
+}
 
 /// Simple CLI for fetching 3GPP spec info
 #[derive(Parser, Debug)]
@@ -23,13 +47,38 @@ struct Args {
 
 fn main() {
     let args = Args::parse();
+    match get_3gpp_spec::list(args.spec_number, args.release, args.date) {
+        Ok(items) => {
+            match args.list {
+                false => {
+                    if let Some(item) = items.first() {
+                        // Determine filename from URL path segment
+                        let filename = match reqwest::Url::parse(&item.url)
+                            .ok()
+                            .and_then(|u| u.path_segments().and_then(|s| s.last()).map(|s| s.to_string()))
+                        {
+                            Some(f) if !f.is_empty() => f,
+                            _ => "download.bin".to_string(),
+                        };
 
-    // `clap` already parsed `spec_number` into `SpecNumber` via `FromStr`.
-    let spec = args.spec_number;
-    println!("spec_number: {}{}{}", spec.series, if spec.number.is_empty() { "" } else { "." }, spec.number);
-    println!("series: {}", spec.series);
-    println!("number: {}", spec.number);
-    println!("date: {:?}", args.date);
-    println!("release: {:?}", args.release);
-    println!("list: {}", args.list);
+                        let dest = Path::new(&filename);
+
+                        match download_url_to_path(&item.url, dest) {
+                            Ok(path) => println!("downloaded to {}", path.display()),
+                            Err(e) => eprintln!("{}", e),
+                        }
+                    } else {
+                        eprintln!("no matching item found");
+                    }
+                    return;
+                }
+                true => {
+                    for item in items.iter() {
+                        println!("{:?}", item);
+                    }
+                }
+            }
+        }
+        Err(e) => eprintln!("{}", e),
+    }
 }
