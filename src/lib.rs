@@ -77,11 +77,29 @@ pub struct DateFilter {
 }
 
 /// Version with nonnegative integer components.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Version {
     pub major: u32,
     pub minor: u32,
     pub editorial: u32,
+}
+
+impl std::cmp::PartialOrd for Version {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl std::cmp::Ord for Version {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        match self.major.cmp(&other.major) {
+            std::cmp::Ordering::Equal => match self.minor.cmp(&other.minor) {
+                std::cmp::Ordering::Equal => self.editorial.cmp(&other.editorial),
+                ord => ord,
+            },
+            ord => ord,
+        }
+    }
 }
 
 /// Single spec item including version, date and URL.
@@ -255,15 +273,37 @@ pub fn list(
             }
         }
 
-        todo!();
-        if let Some(df) = date_filter {
-            if date.year() != df.year as i32 || date.month() != df.month as u32 {
+        // If a `date_filter` is provided, derive `filter_start` and `filter_end`.
+        // `filter_start` is the first day of that year/month at 00:00 UTC.
+        // `filter_end` is three months after `filter_start` (exclusive upper bound).
+        let (filter_start, filter_end): (Option<DateTime<Utc>>, Option<DateTime<Utc>>) = if let Some(df) = date_filter {
+            // `from_ymd_opt` and `and_hms_opt` return Option to avoid panics on invalid dates.
+            let start = chrono::NaiveDate::from_ymd_opt(df.year as i32, df.month as u8 as u32, 1)
+                .and_then(|d| d.and_hms_opt(0, 0, 0))
+                .map(|naive_dt| DateTime::<Utc>::from_naive_utc_and_offset(naive_dt, Utc));
+            let end = start.clone().and_then(|s| s.checked_add_months(chrono::Months::new(3)));
+            (start, end)
+        } else {
+            (None, None)
+        };
+
+        // If a `date_filter` was provided, exclude rows outside [filter_start, filter_end).
+        if let Some(start) = filter_start {
+            if date < start {
                 continue;
+            }
+            if let Some(end) = filter_end {
+                if date >= end {
+                    continue;
+                }
             }
         }
 
         specs.push(SpecItem { version, date, url });
     }
+
+    // Sort by `version` in descending order: compare `major`, then `minor`, then `editorial`.
+    specs.sort_by(|a, b| b.version.cmp(&a.version));
 
     Ok(specs)
 }
