@@ -1,15 +1,10 @@
-use clap::Parser;
-use directories::ProjectDirs;
+use clap::{CommandFactory, FromArgMatches, Parser};
 use get_3gpp_spec::{DateFilter, SpecNumber};
-use serde::Deserialize;
 use std::fs;
 use std::io::copy;
 use std::path::{Path, PathBuf};
 
-#[derive(Deserialize)]
-struct Settings {
-    destination: String,
-}
+mod config;
 
 fn download_url_to_path(url: &str, dest: &Path) -> Result<PathBuf, String> {
     if let Some(parent) = dest.parent() {
@@ -61,8 +56,22 @@ struct Args {
     list: bool,
 }
 
+/// Build the clap command, augmenting `--help` with the resolved config paths.
+fn build_command() -> clap::Command {
+    let settings_display = config::settings_path()
+        .map(|p| p.display().to_string())
+        .unwrap_or_else(|| "<unavailable>".to_string());
+    let destination = config::resolve_destination();
+
+    Args::command().after_help(format!(
+        "Download configuration:\n  Settings file: {}\n  Destination:   {}\n\nTo change where files are saved, create or edit the settings file\nwith a single line:\n  destination = \"<path of desired folder>\"",
+        settings_display,
+        destination.display()
+    ))
+}
+
 fn main() {
-    let args = Args::parse();
+    let args = Args::from_arg_matches(&build_command().get_matches()).unwrap_or_else(|e| e.exit());
     match get_3gpp_spec::list(args.spec_number, args.release, args.date) {
         Ok(items) => {
             match args.list {
@@ -78,30 +87,7 @@ fn main() {
                             _ => "download.bin".to_string(),
                         };
 
-                        let download_dir = if let Some(proj_dirs) =
-                            ProjectDirs::from("engineer", "jeon", "get-3gpp-spec")
-                        {
-                            let config_dir = proj_dirs.config_dir();
-                            let settings_path = config_dir.join("settings.toml");
-                            if settings_path.exists() {
-                                match fs::read_to_string(settings_path) {
-                                    Ok(settings_content) => {
-                                        let settings: Result<Settings, _> =
-                                            toml::from_str(&settings_content);
-                                        if let Ok(settings) = settings {
-                                            PathBuf::from(settings.destination)
-                                        } else {
-                                            PathBuf::from(".")
-                                        }
-                                    }
-                                    Err(_) => PathBuf::from("."),
-                                }
-                            } else {
-                                PathBuf::from(".")
-                            }
-                        } else {
-                            PathBuf::from(".")
-                        };
+                        let download_dir = config::resolve_destination();
 
                         let dest = download_dir.join(&filename);
 
