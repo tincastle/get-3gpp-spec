@@ -78,10 +78,10 @@ pub struct DateFilter {
 }
 
 /// Version with nonnegative integer components.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, serde::Serialize)]
 pub struct Version {
     pub major: u32,
-    pub minor: u32,
+    pub technical: u32,
     pub editorial: u32,
 }
 
@@ -94,7 +94,7 @@ impl std::cmp::PartialOrd for Version {
 impl std::cmp::Ord for Version {
     fn cmp(&self, other: &Self) -> std::cmp::Ordering {
         match self.major.cmp(&other.major) {
-            std::cmp::Ordering::Equal => match self.minor.cmp(&other.minor) {
+            std::cmp::Ordering::Equal => match self.technical.cmp(&other.technical) {
                 std::cmp::Ordering::Equal => self.editorial.cmp(&other.editorial),
                 ord => ord,
             },
@@ -104,7 +104,7 @@ impl std::cmp::Ord for Version {
 }
 
 /// Single spec item including version, date and URL.
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, serde::Serialize)]
 pub struct SpecItem {
     pub version: Version,
     pub date: DateTime<Utc>,
@@ -117,7 +117,7 @@ impl std::fmt::Display for SpecItem {
             f,
             "{:2}.{:2}.{:2} @ {} ({})",
             self.version.major,
-            self.version.minor,
+            self.version.technical,
             self.version.editorial,
             self.date.to_rfc3339(),
             self.url
@@ -191,13 +191,13 @@ fn parse_version(filename: &str) -> Option<Version> {
             };
             Some(Version {
                 major: to_digit(chars[0])?,
-                minor: to_digit(chars[1])?,
+                technical: to_digit(chars[1])?,
                 editorial: to_digit(chars[2])?,
             })
         }
         6 => Some(Version {
             major: ver_str.get(0..2)?.parse().ok()?,
-            minor: ver_str.get(2..4)?.parse().ok()?,
+            technical: ver_str.get(2..4)?.parse().ok()?,
             editorial: ver_str.get(4..6)?.parse().ok()?,
         }),
         _ => None,
@@ -321,7 +321,7 @@ pub fn list(
         specs.push(SpecItem { version, date, url });
     }
 
-    // Sort by `version` in descending order: compare `major`, then `minor`, then `editorial`.
+    // Sort by `version` in descending order: compare `major`, then `technical`, then `editorial`.
     specs.sort_by(|a, b| b.version.cmp(&a.version));
 
     Ok(specs)

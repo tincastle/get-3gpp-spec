@@ -439,7 +439,7 @@ dependencies = [
 
 [[package]]
 name = "get-3gpp-spec"
-version = "0.1.2"
+version = "0.2.0"
 dependencies = [
  "chrono",
  "clap",
@@ -448,6 +448,7 @@ dependencies = [
  "reqwest",
  "scraper",
  "serde",
+ "serde_json",
  "toml",
 ]
 

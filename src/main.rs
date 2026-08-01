@@ -54,6 +54,17 @@ struct Args {
     /// List flag (default: false)
     #[arg(short, long, default_value_t = false)]
     list: bool,
+
+    /// Output format for --list
+    #[arg(short, long, value_enum, default_value_t = OutputFormat::Text)]
+    output: OutputFormat,
+}
+
+/// Output format for listing specs.
+#[derive(Debug, Clone, Copy, clap::ValueEnum)]
+enum OutputFormat {
+    Text,
+    Json,
 }
 
 /// Build the clap command, augmenting `--help` with the resolved config paths.
@@ -102,11 +113,17 @@ fn main() {
                     }
                     return;
                 }
-                true => {
-                    for item in items.iter() {
-                        println!("{}", item);
+                true => match args.output {
+                    OutputFormat::Text => {
+                        for item in items.iter() {
+                            println!("{}", item);
+                        }
                     }
-                }
+                    OutputFormat::Json => match serde_json::to_string_pretty(&items) {
+                        Ok(json) => println!("{}", json),
+                        Err(e) => eprintln!("failed to serialize items to JSON: {}", e),
+                    },
+                },
             }
         }
         Err(e) => eprintln!("{}", e),
